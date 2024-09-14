@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
             RGB_TOG, RGB_M_K, KC_VOLD, KC_VOLU, KC_MUTE, KC_PERC,                            KC_CIRC, KC_HOME,  KC_UP,  KC_END,  KC_RPRN, QK_BOOT,
         // ├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-            RGB_MOD, RGB_HUI, RGB_VAI, RGB_SPI, KC_MPRV, KC_MNXT,                            KC_EQL,  KC_LEFT, KC_DOWN, KC_RGHT, RCS_T(), KC_BSLS,
+            RGB_MOD, RGB_HUI, RGB_VAI, RGB_SPI, KC_MPRV, KC_MNXT,                            KC_EQL,  KC_LEFT, KC_DOWN, KC_RGHT, RCS_T(KC_TRNS), KC_BSLS,
         // ├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
             RGB_RMOD, RGB_HUD, RGB_VAD, RGB_SPD, KC_MPLY, KC_LPRN, _______,         KC_PLUS, KC_END, RGB_HUD, RGB_SAD,  RGB_VAD, EE_CLR, _______,
         // └────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
