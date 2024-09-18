@@ -6,10 +6,13 @@
 enum custom_layers { _QWERTY, _LOWER, _RAISE };
 
 const uint16_t PROGMEM enter_combo[] = {KC_K, KC_L, COMBO_END};
-combo_t                key_combos[]  = {
-    COMBO(enter_combo, KC_ENT),
+const uint16_t PROGMEM equals_combo[] = {KC_0, KC_MINUS, COMBO_END};
 
+combo_t key_combos[] = {
+    COMBO(enter_combo, KC_ENT),
+    COMBO(equals_combo, KC_EQUAL),
 };
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = LAYOUT(
@@ -20,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
              KC_LSFT, KC_A,     KC_S,    KC_D,    KC_F,    KC_G,                              KC_H,     KC_J,    KC_K,    KC_L,   KC_SCLN, KC_QUOT,
         // ├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-             KC_LSFT, KC_Z,     KC_X,   KC_C,     KC_V,    KC_B,   KC_HOME,          KC_END, KC_N,      KC_M,   KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+            KC_LSFT, ALT_T(KC_Z), KC_X,  KC_C,   KC_V,    KC_B,   TL_UPPR,          KC_END,   KC_N,      KC_M,   KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
         // └────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                             KC_LGUI,  TL_LOWR, CTL_T(KC_TAB),          ALT_T(KC_BSPC), LT(2, KC_SPC), KC_RALT
         //                                  └────────┴────────┴────────┘                 └────────┴────────┴────────┘
@@ -48,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // ├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
             RGB_MOD, RGB_HUI, RGB_VAI, RGB_SPI, KC_MPRV, KC_MNXT,                            KC_EQL,  KC_LEFT, KC_DOWN, KC_RGHT, RCS_T(KC_TRNS), KC_BSLS,
         // ├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-            _______, RGB_HUD, RGB_VAD, RGB_SPD, KC_MPLY, KC_LPRN, _______,         KC_PLUS, KC_END, RGB_HUD, RGB_SAD,  RGB_VAD, EE_CLR, _______,
+            RGB_RMOD, RGB_HUD, RGB_VAD, RGB_SPD, KC_MPLY, KC_LPRN, _______,         KC_PLUS, KC_END, RGB_HUD, RGB_SAD,  RGB_VAD, EE_CLR, _______,
         // └────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
                                              _______, _______, _______,                   _______, _______, _______
                                          // └────────┴────────┴────────┘                 └────────┴────────┴────────┘
